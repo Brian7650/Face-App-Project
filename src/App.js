@@ -63,7 +63,7 @@ displayFaceBox = (box) => {
 
 onButtonSubmit = () => {
   this.setState({imageUrl: this.state.input});
-  fetch('https://aqueous-garden-34137.herokuapp.com/imageurl', {
+  fetch('https://facescanapp-front.onrender.com/imageurl', {
             method: 'post',
             headers: {'Content-Type': 'application/json'},
             body: JSON.stringify({
@@ -73,7 +73,7 @@ onButtonSubmit = () => {
           .then(response => response.json())
           .then(response =>{
             if (response) {
-              fetch('https://aqueous-garden-34137.herokuapp.com/image', {
+              fetch('https://facescanapp-front.onrender.com/image', {
             method: 'put',
             headers: {'Content-Type': 'application/json'},
             body: JSON.stringify({
