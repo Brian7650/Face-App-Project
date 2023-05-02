@@ -63,7 +63,7 @@ displayFaceBox = (box) => {
 
 onButtonSubmit = () => {
   this.setState({imageUrl: this.state.input});
-  fetch('https://facescanapp.onrender.com/imageurl', {
+  fetch('https://face-app-project-back.onrender.com/imageurl', {
             method: 'post',
             headers: {'Content-Type': 'application/json'},
             body: JSON.stringify({
@@ -73,7 +73,7 @@ onButtonSubmit = () => {
           .then(response => response.json())
           .then(response =>{
             if (response) {
-              fetch('https://facescanapp.onrender.com/image', {
+              fetch('https://face-app-project-back.onrender.com/image', {
             method: 'put',
             headers: {'Content-Type': 'application/json'},
             body: JSON.stringify({
